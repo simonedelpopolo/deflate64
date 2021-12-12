@@ -7,3 +7,4 @@ tests
 .eslintrc.json
 coverage
 jest.config.js
+assertions
