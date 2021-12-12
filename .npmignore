@@ -1,0 +1,9 @@
+node_modules
+.idea
+.pnpm-debug.log
+pnpm-lock.yaml
+.git
+tests
+.eslintrc.json
+coverage
+jest.config.js
