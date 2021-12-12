@@ -1,7 +1,7 @@
+import help, {version} from './lib/help.js'
 import decode from './lib/decode.js'
 import encode from './lib/encode.js'
 import { flags as flagsParser } from './lib/flags.js'
-import help from './lib/help.js'
 import { argv as parameters } from './lib/argv.js'
 
 /**
@@ -68,6 +68,13 @@ export default async function deflate64( argv ) {
             
             break
             
+        }
+        
+        case 'version': {
+            
+            process.stdout.write( `${version}` )
+            
+            break
         }
         
         default: {
