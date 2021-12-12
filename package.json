@@ -1,12 +1,13 @@
 {
   "name": "deflate64",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "type": "module",
   "description": "Command line utility to convert one file/string into compressed base64 encoding. the file/string can be decompressed and decoded to its original status.",
   "main": "./index.js",
   "scripts": {
     "test": "NODE_OPTIONS='--experimental-vm-modules' pnpx jest",
-    "lint": "pnpx eslint . --ext .js"
+    "lint": "pnpx eslint . --ext .js",
+    "assertions": "cd ./assertions/ && node ./assertions.js"
   },
   "bin": {
     "deflate64": "./deflate64.js"
