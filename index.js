@@ -6,7 +6,7 @@ import { argv as parameters } from './lib/argv.js'
 
 /**
  *
- * @param argv {string[] | Object<{command: string, flag_name: string}>}
+ * @param argv {string[]}
  * @returns {Promise<void>}
  */
 export default async function deflate64( argv ) {
