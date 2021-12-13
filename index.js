@@ -1,8 +1,8 @@
 import help, {version} from './lib/help.js'
 import decode from './lib/decode.js'
 import encode from './lib/encode.js'
-import { flags as flagsParser } from './lib/flags.js'
-import { argv as parameters } from './lib/argv.js'
+import { options } from './lib/options.js'
+import { parameters } from './lib/parameters.js'
 
 /**
  *
@@ -30,12 +30,12 @@ export default async function deflate64( argv ) {
             
             if ( typeof flags !== 'undefined' && flags.length > 0 ) {
                 
-                const flagsObject = await flagsParser( flags )
+                const flagsObject = await options( flags )
                     .then( object => object )
                     .catch( reason => {
                         help( undefined, 'list-available' )
-                        console.error( '\x1b[31m', `  ${ reason.message }.\n` )
-                        console.error( `  given flags: ${ JSON.stringify( reason.flags ) }.\n`, '\x1b[0m' )
+                        console.error( '\x1b[31m', `  ${ reason.message }\n` )
+                        console.error( `  given flags: ${ JSON.stringify( reason.flags ) }\n`, '\x1b[0m' )
                         process.exit( 1 )
                     } )
                 
@@ -52,12 +52,12 @@ export default async function deflate64( argv ) {
             
             if ( typeof flags !== 'undefined' && flags.length > 0 ) {
                 
-                const flagsObject = await flagsParser( flags )
+                const flagsObject = await options( flags )
                     .then( object => object )
                     .catch( reason => {
                         help( undefined, 'list-available' )
-                        console.error( '\x1b[31m', `  ${ reason.message }.\n` )
-                        console.error( `  given flags: ${ JSON.stringify( reason.flags ) }.\n`, '\x1b[0m' )
+                        console.error( '\x1b[31m', `  ${ reason.message }\n` )
+                        console.error( `  given flags: ${ JSON.stringify( reason.flags ) }\n`, '\x1b[0m' )
                         process.exit( 1 )
                     } )
                 
@@ -72,7 +72,7 @@ export default async function deflate64( argv ) {
         
         case 'version': {
             
-            process.stdout.write( `${version}` )
+            console.log( `${version}` )
             
             break
         }
