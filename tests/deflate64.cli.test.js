@@ -19,7 +19,7 @@ test('testing deflate64 output of json string spawning a process and digest the 
     const deflate64 = spawn('./deflate64.js', [
         'encode',
         '--string', 'hello',
-        '--json', 'true'
+        '--json', 'true',
     ])
     
     deflate64.stdout.on('data', async chunk => {
@@ -32,8 +32,10 @@ test('testing deflate64 decode output the decoded string from json spawning a pr
     const deflate64 = spawn('./deflate64.js', [
         'decode',
         '--string', '{"string":"eJzLSM3JyQcABiwCFQ=="}',
-        '--in-object', 'true'
+        '--in-object', 'true',
+        '--spawn', 'true'
     ])
+    
     
     deflate64.stdout.on('data', chunk => {
         expect(`${chunk}`).toBe('hello')
