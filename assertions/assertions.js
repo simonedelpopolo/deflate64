@@ -18,7 +18,8 @@ deflate64.stdout.on('data', async chunk => {
 const deflate642 = spawn('../deflate64.js', [
     'decode',
     '--string', '{"string":"eJzLSM3JyQcABiwCFQ=="}',
-    '--in-object', 'true'
+    '--in-object', 'true',
+    '--spawn', 'true'
 ])
 
 deflate642.stdout.on('data', async chunk => {
