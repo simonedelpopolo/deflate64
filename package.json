@@ -1,6 +1,6 @@
 {
   "name": "deflate64",
-  "version": "0.3.4",
+  "version": "0.3.5",
   "type": "module",
   "engines": {
     "node": ">=v16.13.1 <17",
@@ -22,7 +22,8 @@
     "file",
     "deflate",
     "inflate",
-    "string"
+    "string",
+    "automation"
   ],
   "author": "Simone Del Popolo",
   "license": "Apache-2.0",
