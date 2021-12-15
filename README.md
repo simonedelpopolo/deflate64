@@ -96,7 +96,7 @@ I'll show some use cases related to the main project, so you'll get the point.
 - ##### --string
 
 ```shell
-./deflate64.js help --string
+deflate64 help --string
     ________________________________________________________________________    
     |                           Deflate64 v0.3.2                           |
     ------------------------------------------------------------------------    
