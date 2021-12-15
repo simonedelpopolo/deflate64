@@ -1,6 +1,6 @@
 {
   "name": "deflate64",
-  "version": "0.3.6",
+  "version": "0.3.7",
   "type": "module",
   "engines": {
     "node": ">=v16.13.1 <17",
@@ -40,7 +40,7 @@
   },
   "homepage": "https://github.com/simonedelpopolo/deflate64#readme",
   "dependencies": {
-    "@simonedelpopolo/json-parse": "^1.2.0",
+    "@simonedelpopolo/json-parse": "^1.3.0",
     "@simonedelpopolo/to-bool": "^1.0.1"
   },
   "os": [
