@@ -2,6 +2,10 @@
   "name": "deflate64",
   "version": "0.3.1",
   "type": "module",
+  "engines": {
+    "node": ">=v16.13.1 <17",
+    "npm": "~8.3.0"
+  },
   "description": "Command line utility to convert one file/string into compressed base64 encoding. the file/string can be decompressed and decoded to its original status.",
   "main": "./index.js",
   "scripts": {
@@ -37,5 +41,14 @@
   "dependencies": {
     "@simonedelpopolo/json-parse": "^1.2.0",
     "@simonedelpopolo/to-bool": "^1.0.1"
-  }
+  },
+  "os": [
+    "linux",
+    "darwin",
+    "!win32"
+  ],
+  "cpu": [
+    "x64",
+    "arm64"
+  ]
 }
