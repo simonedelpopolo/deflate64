@@ -78,6 +78,15 @@ I'll show some use cases related to the main project, so you'll get the point.
 
 ### Road Map
 
+> fell free to propose some challenges 😎
+
+- [ ] `--http flag` to get content remotely 
+- [ ] `--call-back flag` to import external javascript module to run personalized tasks after encoding/decoding
+- [ ] `--pre-call flag` to import external javascript module to run personalized tasks before encoding/decoding
+- [ ] `--json flag` add option of type string to specify the property name which will store the encoded/decoded string
+- [ ] `--in-object flag` add option of type string to process the decoded/encoded string extracting it from the specified property name
+- [ ] `--complex-string="the very \"much\" long and \'complex string\' to parse and decode with RegHex and finally solve the --string flag dilemma?`
+
 #### Commands for Deflate64 CLI
 
 ###### Commands are few as small this utility is :)
