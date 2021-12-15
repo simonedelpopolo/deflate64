@@ -1,6 +1,6 @@
 {
   "name": "deflate64",
-  "version": "0.3.5",
+  "version": "0.3.6",
   "type": "module",
   "engines": {
     "node": ">=v16.13.1 <17",
