@@ -1,4 +1,3 @@
-/* eslint-disable */
 import { spawn } from 'child_process'
 import { parse } from '@simonedelpopolo/json-parse'
 import { deepEqual, ok } from 'assert/strict'

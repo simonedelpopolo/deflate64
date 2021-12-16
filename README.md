@@ -2,6 +2,7 @@
 
 ###### Command line utility to convert one file/string into compressed base64 encoding. the file/string can be decompressed and decoded to its original status.
 
+![NPM](https://img.shields.io/npm/l/deflate64) ![npm](https://img.shields.io/npm/dw/deflate64)
 ___
 
 ## Index of Contents
