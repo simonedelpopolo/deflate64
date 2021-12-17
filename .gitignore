@@ -2,4 +2,5 @@ node_modules
 .idea
 .pnpm-debug.log
 pnpm-lock.yaml
+package-lock.json
 /coverage/

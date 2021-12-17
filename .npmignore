@@ -1,11 +1,12 @@
 node_modules
 .idea
-.pnpm-debug.log
-pnpm-lock.yaml
 .git
 tests
 .eslintrc.json
+package-lock.json
 coverage
 jest.config.js
 assertions
+.gitignore
 .eslintignore
+eslint-html
