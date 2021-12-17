@@ -1,12 +1,13 @@
-import help, {version} from './lib/help.js'
 import decode from './lib/decode.js'
 import encode from './lib/encode.js'
 import { options } from './lib/options.js'
 import { parameters } from './lib/parameters.js'
+import help, {version} from './lib/help.js'
 
 /**
+ * The entry point to deflate64.
  *
- * @param argv {string[]}
+ * @param {string[]} argv - The process.argv.splice( 0, 2 ).
  * @returns {Promise<void>}
  */
 export default async function deflate64( argv ) {
@@ -18,9 +19,9 @@ export default async function deflate64( argv ) {
         case 'help': {
             
             let flag = undefined
-            if ( typeof flags !== 'undefined' ) {
+            if ( typeof flags !== 'undefined' )
                 flag = flags === false ? undefined : flags[ 0 ]
-            }
+            
             help( command_help, flag )
             
             break
