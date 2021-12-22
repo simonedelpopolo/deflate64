@@ -40,7 +40,6 @@
   "publishConfig": {
     "access": "public"
   },
-  "readme": "README.md",
   "homepage": "https://github.com/simonedelpopolo/deflate64#readme",
   "repository": {
     "type": "git",
