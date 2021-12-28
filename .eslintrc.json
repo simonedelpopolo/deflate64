@@ -22,6 +22,25 @@
     }
   },
   "rules": {
+    "object-curly-spacing": [
+      "warn",
+      "always"
+    ],
+    "arrow-spacing": [
+      "error",
+      {
+        "before": true,
+        "after": true
+      }
+    ],
+    "array-bracket-spacing": [
+      "warn",
+      "always"
+    ],
+    "computed-property-spacing": [
+      "warn",
+      "always"
+    ],
     "space-in-parens": [
       "warn",
       "always"
@@ -60,10 +79,6 @@
           "multiple"
         ]
       }
-    ],
-    "array-bracket-spacing": [
-      "warn",
-      "always"
     ],
     "eqeqeq": [
       "error",
