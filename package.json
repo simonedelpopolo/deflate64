@@ -1,7 +1,7 @@
 {
   "name": "deflate64",
   "description": "Command line utility to convert one file/string into compressed base64 encoding. the file/string can be decompressed and decoded to its original status.",
-  "version": "1.3.11",
+  "version": "1.3.12",
   "type": "module",
   "engines": {
     "node": ">=v16.13.1 <17",
@@ -23,9 +23,10 @@
   "scripts": {
     "jest": "NODE_OPTIONS='--experimental-vm-modules' npx jest",
     "eslint": "npx eslint . --ext .js",
-    "eslint-html": "npx eslint . --ext .js -o ./eslint-html/index.html -f html",
     "eslint-fix": "npx eslint --fix . --ext .js",
-    "assertions": "cd ./assertions/ && node ./assertions.js"
+    "assertions": "cd ./assertions/ && node ./assertions.js",
+    "assertion0": "cd ./assertions/ && node ./assertions.js assertion0",
+    "assertion1": "cd ./assertions/ && node ./assertions.js assertion1"
   },
   "dependencies": {
     "@simonedelpopolo/json-parse": "^1.3.1",
