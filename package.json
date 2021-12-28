@@ -1,7 +1,7 @@
 {
   "name": "deflate64",
   "description": "Command line utility to convert one file/string into compressed base64 encoding. the file/string can be decompressed and decoded to its original status.",
-  "version": "1.3.12",
+  "version": "1.3.13",
   "type": "module",
   "engines": {
     "node": ">=v16.13.1 <17",
