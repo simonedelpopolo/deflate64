@@ -1,8 +1,90 @@
-import decode from './lib/decode.js'
-import encode from './lib/encode.js'
-import { options } from './lib/options.js'
-import { parameters } from './lib/parameters.js'
-import help, {version} from './lib/help.js'
+import * as Module from 'module'
+import { array_ } from 'oftypes'
+import help from './lib/help.js'
+
+/**
+ * @private
+ */
+const argv__ = {
+    
+    /**
+     * @type {null|string[]}
+     */
+    argv: null,
+    
+    /**
+     * Type checker for the argv argument.
+     *
+     * @param {any} given_argv - The given argument `argv`.
+     * @returns {Promise | PromiseFulfilledResult<true> | PromiseRejectedResult<string>}
+     */
+    types: async function types( given_argv ){
+        const messageReject = '[d64-TypeError] Only type of array is accepted for argument `argv`.'
+        const argvResolvers = {
+            true: ( async () => true ),
+            false: ( async ( given ) => {
+            
+                return new Promise( ( resolve, reject ) => {
+                    reject( `\n ${messageReject}\n\t Given argument: \x1b[32m{${ typeof given_argv }}\x1b[0m -> \x1b[31m ${JSON.stringify( given )}\x1b[0m \n\n` )
+                } )
+            } )
+        }
+    
+        const checkObject = await array_( given_argv, argvResolvers, true )
+    
+        await checkObject[ 0 ]( checkObject[ 1 ] ).catch( error => {
+            process.stderr.write( `${error}` )
+            process.exit( 1 )
+        } )
+        this.argv = given_argv
+    },
+    
+    length: function length(){
+        console.log( this.argv )
+        this.argv.length === 0 ? help() : null
+    }
+    
+}
+/**
+ * @type {Module}
+ */
+const d64 = Object.create( Module )
+
+/**
+ * @type {symbol}
+ */
+const entryPoint = Symbol( 'Deflate 64 entry point.' )
+Object.defineProperty( d64, entryPoint, {
+    enumerable: true,
+    configurable: false,
+    writable: false,
+    /**
+     * Deflate 64 entry point.
+     *
+     * @public
+     * @param {string[]} argv - Process.argv.splice( 0, 2 ) command line arguments splicing out from `process.argv` the paths for node and executable.js.
+     * @returns {Promise | PromiseFulfilledResult<any> | PromiseRejectedResult<any>}
+     */
+    value: async function entryPoint( argv ){
+    
+        await argv__.types( argv )
+        argv__.length()
+    }
+} )
+
+Object.freeze( d64 )
+
+/**
+ * Deflate 64 entry point.
+ *
+ * @public
+ * @param {string[]} argv - Process.argv.splice( 0, 2 ) command line arguments splicing out from `process.argv` the paths for node and executable.js.
+ * @returns {Promise | PromiseFulfilledResult<any> | PromiseRejectedResult<any>}
+ */
+export default function deflate64( argv ){
+    
+    return  d64[ entryPoint ]( argv )
+}
 
 /**
  * The entry point to deflate64.
@@ -10,6 +92,7 @@ import help, {version} from './lib/help.js'
  * @param {string[]} argv - The process.argv.splice( 0, 2 ).
  * @returns {Promise<void>}
  */
+/* An
 export default async function deflate64( argv ) {
     
     const { command, flags, command_help } = parameters( argv )
@@ -89,4 +172,4 @@ export default async function deflate64( argv ) {
             break
         }
     }
-}
+}*/
