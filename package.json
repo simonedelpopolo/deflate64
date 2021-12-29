@@ -18,19 +18,19 @@
   ],
   "main": "./index.js",
   "bin": {
-    "deflate64": "./executable.js"
+    "d64": "./executable.js"
   },
   "scripts": {
     "jest": "NODE_OPTIONS='--experimental-vm-modules' npx jest",
     "eslint": "npx eslint . --ext .js",
     "eslint-fix": "npx eslint --fix . --ext .js",
     "assertions": "cd ./assertions/ && node ./assertions.js",
-    "assertion0": "cd ./assertions/ && node ./assertions.js assertion0",
-    "assertion1": "cd ./assertions/ && node ./assertions.js assertion1"
+    "assertion0": "cd ./assertions/ && node ./assertions.js assertion0"
   },
   "dependencies": {
     "@simonedelpopolo/json-parse": "^1.3.1",
-    "@simonedelpopolo/to-bool": "^1.2.0"
+    "@simonedelpopolo/to-bool": "^1.2.0",
+    "oftypes": "^0.1.1"
   },
   "devDependencies": {
     "eslint": "^8.4.1",
