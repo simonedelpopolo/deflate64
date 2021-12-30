@@ -1,11 +1,8 @@
 node_modules
 .idea
 .git
-tests
 .eslintrc.json
 package-lock.json
-coverage
-jest.config.js
 assertions
 .gitignore
 .eslintignore

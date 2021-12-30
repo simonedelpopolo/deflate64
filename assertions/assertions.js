@@ -16,7 +16,7 @@ const Assertions = {
         let expectedObject = { string: 'eJzLSM3JyQcABiwCFQ==' }
         console.log( `\x1b[31m It checks if the returning variable is of type Object and if the exit code is`, 0, '\x1b[0m' )
         
-        deflate64(['decode', '--string=eJzLSM3JyQcABiwCFQ==', '--json=true'])
+        deflate64( null )
     },
 }
 

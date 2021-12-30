@@ -30,13 +30,11 @@
   "dependencies": {
     "@simonedelpopolo/json-parse": "^1.3.1",
     "@simonedelpopolo/to-bool": "^1.2.0",
-    "oftypes": "^0.1.1"
+    "oftypes": "^0.2.2"
   },
   "devDependencies": {
     "eslint": "^8.4.1",
-    "eslint-plugin-jsdoc": "^37.2.2",
-    "jest": "^27.4.4",
-    "jest-extended": "^1.2.0"
+    "eslint-plugin-jsdoc": "^37.2.2"
   },
   "publishConfig": {
     "access": "public"
