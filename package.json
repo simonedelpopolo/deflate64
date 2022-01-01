@@ -8,6 +8,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   "version": "1.3.18",
 =======
   "version": "1.3.17",
@@ -30,6 +31,9 @@
 =======
   "version": "1.4.25",
 >>>>>>> 30e08fe (v1.4.25 shortening commands & flags ↓)
+=======
+  "version": "1.4.27",
+>>>>>>> c70214c (v1.4.27 --remote flag ⬇︎)
   "type": "module",
   "engines": {
     "node": ">=v16.13.1 <17",
