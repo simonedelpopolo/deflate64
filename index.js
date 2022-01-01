@@ -1,4 +1,4 @@
-import d64, { entryPoint, entryPointSymbol  } from './lib/d64/exporter.js'
+import { entryPoint, entryPointSymbol  } from './lib/d64/exporter.js'
 
 //Object.freeze( d64 )
 
