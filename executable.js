@@ -7,5 +7,6 @@ process.argv.splice( 0, 2 )
 /**
  * Entry point to deflate64.
  */
-deflate64( process.argv )
+await deflate64( process.argv )
 
+process.exit( 0 )

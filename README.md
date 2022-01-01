@@ -1,8 +1,10 @@
-# Deflate64
+# deflate64
 
 ###### Command line utility to convert one file/string into compressed base64 encoding. the file/string can be decompressed and decoded to its original status.
 
-![NPM](https://img.shields.io/npm/l/deflate64) ![npm](https://img.shields.io/npm/dw/deflate64)
+> ℹ️ keep an eye on the branch [v2.0.0](https://github.com/simonedelpopolo/deflate64/tree/v2.0.0)  
+> ⚠️ every non-breaking changes will be merged in main until d64@2.0.0 will be ready.  
+> ⚠️ d64@2.0.0 will introduce some breaking changes, but deflate64@latest will be still available but not maintained.
 ___
 
 ## Index of Contents
@@ -47,45 +49,37 @@ deflate64 help # it shows the available commands and flags
 
 ___
 
-#### Usage of the cli Deflate64 with spawn in your project
+#### Import d64 in your project
 
-Sometimes we need to use command line software in our nodejs code and use the output of the program as variable.  
-Deflate64 got you covered. Let's see a simple example to implement this use case.
+> ℹ️ Deflate64@1.4.23 now return string, not only prints!  
+> ⚠️ It still uses the flag --spawn. It will be removed and replaced by the flag --quiet in the d64@2.0.0  
+> ⚠️ d64@2.0.0 will introduce some breaking changes, but deflate64@latest will be still available but not maintained.
+
+Deflate64 imported as a module in your project? It got you covered. Let's see a simple example to implement this use case.
 
 ```shell
-npm i -g deflate64 # install deflate64 globally
-npm i @simonedelpopolo/json-parse # install json-parse in you project scope
+npm i deflate64
 ```
 
 `ESM`
 
 ```javascript
-import { spawn } from 'child_process'
-import { parse } from '@simonedelpopolo/json-parse'
+import deflate64 from 'deflate64'
 
-const deflate64s = spawn( 'deflate64', [
-    'encode',
-    '--string',
-    'hello',
-    '--json',
-    'true',
-] )
+const GMF = 'good morning folks'
 
-let jsonObject
-deflate64s.stdout.on( 'data', async chunk => {
-    jsonObject = await parse( chunk )
-    console.log(
-        'output of deflate64: ',
-        jsonObject,
-        ' -> type of the output: [ ',
-        typeof jsonObject,
-        ' ]. the encoded string extracted from the object: ',
-        jsonObject.string
-    )
-} )
+// At first, encodes the string
+const encodedGMF = await deflate64( [ 'encode', '--string', GMF, /*no prints to stdout when spawn is set to true*/'--spawn', 'true' ] )
 
-// it yealds: 
-// output of deflate64:  { string: 'eJzLSM3JyQcABiwCFQ==' }  -> type of the output: [  object  ]. the encoded string extracted by the object:  eJzLSM3JyQcABiwCFQ==
+// At second, decodes the string
+const goodMorningFolks = await deflate64( [ 'decode', '--string', encodedGMF, /*no prints to stdout when spawn is set to true*/'--spawn', 'true' ] )
+
+// At third, replaces the word folks with buddies
+const goodMorningBuddies = goodMorningFolks.replace( 'folks', 'buddies' )
+
+console.log(goodMorningBuddies)
+
+// it prints good morning buddies
 ```
 
 ___
@@ -103,7 +97,7 @@ ___
 
 > fell free to propose some challenges 😎
 
-- [ ] `--http flag` to get content remotely 
+- [ ] `--remote flag` to get content remotely 
 - [ ] `--call-back flag` to import external javascript module to run personalized tasks after encoding/decoding
 - [ ] `--pre-call flag` to import external javascript module to run personalized tasks before encoding/decoding
 - [ ] `--json flag` add option of type string to specify the property name which will store the encoded/decoded string
@@ -277,12 +271,13 @@ ___
 
 ___
 
+> ℹ️ Deflate64@1.4.23 now return string, not only prints!  
+> ⚠️ It still uses the flag --spawn. It will be removed and replaced by the flag --quiet in the d64@2.0.0  
+> ⚠️ d64@2.0.0 will introduce some breaking changes, but deflate64@latest will be still available but not maintained.  
 - ##### --spawn
 
-> ℹ️ Info: console.log add a \n character at the end of the stream and this can bring some Error
-
-  - Use case: When calling the deflate64 using the process.spawn function it has a more clean output
-  - Options [ true | false] by default is set to false, if is set to true will switch from console.log to process.std.write
+  - Use case: When importing deflate64 as a module in your project
+  - Options [ true | false] by default is set to false, and it will print to stdout in the shell. If it is set to true will turn off the shell stdout.
   - Usage: `deflate64 encode --string '{"string":"hello"}' --json true --in-object true --spawn true`
   - Returns: `{"string":"eJzLSM3JyQcABiwCFQ=="}`
 
