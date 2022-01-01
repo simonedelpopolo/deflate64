@@ -13,15 +13,3 @@ export default function deflate64( argv ){
     
     return  entryPoint[ entryPointSymbol ]( argv )
 }
-
-/**
- * The entry point to deflate64.
- *
- * @param {string[]} argv - The process.argv.splice( 0, 2 ).
- * @returns {Promise<void>}
- */
-/* An
-export default async function deflate64( argv ) {
-
-
-}*/
