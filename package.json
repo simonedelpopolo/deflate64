@@ -7,6 +7,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   "version": "1.3.18",
 =======
   "version": "1.3.17",
@@ -26,6 +27,9 @@
 =======
   "version": "1.4.24",
 >>>>>>> 02044ee (v1.4.24)
+=======
+  "version": "1.4.25",
+>>>>>>> 30e08fe (v1.4.25 shortening commands & flags ↓)
   "type": "module",
   "engines": {
     "node": ">=v16.13.1 <17",

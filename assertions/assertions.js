@@ -29,10 +29,10 @@ const Assertions = {
                 const GMF = 'good morning folks'
                 
                 // At first, we encode the string
-                const encodedGMF = await deflate64( [ 'encode', '--string', GMF, '--spawn', 'true' ] )
+                const encodedGMF = await deflate64( [ 'encode', '--string', GMF, '--quiet', 'true' ] )
                 
                 // At second, decode the string
-                const goodMorningFolks = await deflate64( [ 'decode', '--string', encodedGMF, '--spawn', 'true' ] )
+                const goodMorningFolks = await deflate64( [ 'decode', '--string', encodedGMF, '-q', 'true' ] )
                 
                 // At third, we replace the word folks with buddies
                 const goodMorningBuddies = goodMorningFolks.replace( 'folks', 'buddies' )
