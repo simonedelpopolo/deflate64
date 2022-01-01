@@ -26,7 +26,7 @@
   ],
   "main": "./index.js",
   "bin": {
-    "d64": "./executable.js"
+    "deflate64": "./executable.js"
   },
   "scripts": {
     "eslint": "npx eslint . --ext .js",
