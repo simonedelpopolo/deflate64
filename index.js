@@ -1,7 +1,5 @@
 import { entryPoint, entryPointSymbol  } from './lib/d64/exporter.js'
 
-//Object.freeze( d64 )
-
 /**
  * Deflate 64 entry point.
  *
