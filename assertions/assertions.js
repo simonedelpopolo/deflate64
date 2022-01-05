@@ -14,9 +14,9 @@ const Assertions = {
     assertion0 : async () => {
         console.log( '__________________________________________________________________________' )
     
-        console.log( '\x1b[31m Assertions --spawn flag', 0, '\x1b[0m' )
-        console.log( '    \x1b[31m the spawn flag is true', 0, '\x1b[0m' )
-        console.log( '    \x1b[31m the spawn flag is false', 1, '\x1b[0m' )
+        console.log( '\x1b[31m Assertions --quiet && -q flag', 0, '\x1b[0m' )
+        console.log( '    \x1b[31m the --quiet flag is true', 0, '\x1b[0m' )
+        console.log( '    \x1b[31m the -q flag is false', 1, '\x1b[0m' )
     
         let response
         
@@ -25,17 +25,17 @@ const Assertions = {
             
             '0' : async ( ) => {
                 
-                console.log( '    \x1b[31m executing 64 when the spwan flag is true', 0, '\x1b[0m\n' )
+                console.log( '    \x1b[31m executing d64 when the --quiet flag is true', 0, '\x1b[0m\n' )
                 const GMF = 'good morning folks'
                 
                 // At first, we encode the string
-                const encodedGMF = await deflate64( [ 'encode', '--string', GMF, '--quiet', 'true' ] )
+                const encodedGMF = await deflate64( [ 'encode', '--string', GMF, '--quiet', 'true', '--compression', 'false', '-a', 'true' ] )
                 
                 // At second, decode the string
-                const goodMorningFolks = await deflate64( [ 'decode', '--string', encodedGMF, '-q', 'true' ] )
+                const goodMorningFolks = await deflate64( [ 'decode', '--string', encodedGMF.data, '-q', 'true', '--compression', 'false', '-a', 'true' ] )
                 
                 // At third, we replace the word folks with buddies
-                const goodMorningBuddies = goodMorningFolks.replace( 'folks', 'buddies' )
+                const goodMorningBuddies = goodMorningFolks.data.replace( 'folks', 'buddies' )
                 
             
                 try{
@@ -65,17 +65,17 @@ const Assertions = {
             },
         
             '1' : async ( ) => {
-                console.log( '    \x1b[31m executing 64 when the spwan flag is false', 1, '\x1b[0m\n' )
+                console.log( '    \x1b[31m executing d64 when the --quiet flag is false', 1, '\x1b[0m\n' )
                 const GMF = 'good morning folks'
     
                 // At first, we encode the string
-                const encodedGMF = await deflate64( [ 'encode', '--string', GMF, '--spawn', 'false' ] )
+                const encodedGMF = await deflate64( [ 'encode', '--string', GMF, '--quiet', 'false', '-c', 'false', '-a', 'true' ] )
     
                 // At second, decode the string
-                const goodMorningFolks = await deflate64( [ 'decode', '--string', encodedGMF, '--spawn', 'false' ] )
+                const goodMorningFolks = await deflate64( [ 'decode', '--string', encodedGMF.data, '-q', 'false', '-c', 'false', '-a', 'true' ] )
     
                 // At third, we replace the word folks with buddies
-                const goodMorningBuddies = goodMorningFolks.replace( 'folks', 'buddies' )
+                const goodMorningBuddies = goodMorningFolks.data.replace( 'folks', 'buddies' )
                 
                 try{
                     ok( typeof goodMorningFolks === 'object' )
