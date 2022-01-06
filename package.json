@@ -12,6 +12,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   "version": "1.3.18",
 =======
   "version": "1.3.17",
@@ -46,6 +47,9 @@
 =======
   "version": "2.0.2-beta",
 >>>>>>> ee26cf6 (v2.0.2-beta long message ahead ⬇︎)
+=======
+  "version": "2.0.3-beta",
+>>>>>>> 021a9d6 (v2.0.3-beta Node.js Tests and npmjs publishing)
   "type": "module",
   "engines": {
     "node": ">=v16.13.1 <17",
