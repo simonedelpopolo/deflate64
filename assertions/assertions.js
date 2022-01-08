@@ -1,18 +1,29 @@
-console.time( 'assertions finished ' )
-import deflate64 from '../index.js'
+// A todo assertions and statements.
+const consoleTimeMessage = '|               \x1b[33massertion finished\x1b[0m                           |'
+console.time( consoleTimeMessage )
+import deflate64  from '../index.js'
 import { EventEmitter } from 'events'
-import { ok } from 'assert'
+import { ok } from 'assert/strict'
 
 const AssertionEvent = new EventEmitter()
-
+console.log( ' --------------------------------------------------------------------------' )
+console.log( '|               \x1b[33massertion started\x1b[0m', new Date(), '                |' )
+console.log( ' --------------------------------------------------------------------------' )
 AssertionEvent.on( 'end', () => {
-    console.timeEnd( 'assertions finished ' )
+    
+    console.log( '___________________________________________________________________________' )
+    console.log()
+    console.log( ' --------------------------------------------------------------------------' )
+    console.timeEnd( consoleTimeMessage )
+    console.log( ' --------------------------------------------------------------------------' )
+    
+    console.log()
+    console.log( '---------------------------------------------------------------------------' )
 } )
 
 const Assertions = {
     
     assertion0 : async () => {
-        console.log( '__________________________________________________________________________' )
     
         console.log( '\x1b[31m Assertions --quiet && -q flag', 0, '\x1b[0m' )
         console.log( '    \x1b[31m the --quiet flag is true', 0, '\x1b[0m' )

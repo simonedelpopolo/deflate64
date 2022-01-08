@@ -1,9 +1,11 @@
-node_modules
 .idea
+node_modules
 .git
-.eslintrc.json
-package-lock.json
-assertions
-.gitignore
-.eslintignore
 .github
+assertions
+.eslintignore
+.eslintrc.json
+.gitignore
+Dockerfile
+package-lock.json
+README.md
