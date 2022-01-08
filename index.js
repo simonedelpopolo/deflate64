@@ -17,7 +17,7 @@ export default function deflate64( argv ){
  *
  * @public
  * @param {string[]} argv - Process.argv.splice( 0, 2 ) command line arguments splicing out from `process.argv` the paths for node and executable.js.
- * @returns {Promise | PromiseFulfilledResult<any> | PromiseRejectedResult<any>}
+ * @returns {any|Promise | PromiseFulfilledResult<any> | PromiseRejectedResult<any>}
  */
 export function d64( argv ){
     
