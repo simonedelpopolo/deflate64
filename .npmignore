@@ -6,3 +6,4 @@ package-lock.json
 assertions
 .gitignore
 .eslintignore
+.github

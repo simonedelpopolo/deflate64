@@ -2,15 +2,13 @@
 
 ###### Command line utility to convert one file/string into compressed base64 encoding. the file/string can be decompressed and decoded to its original status.
 
-> ℹ️ keep an eye on the branch [v2.0.0](https://github.com/simonedelpopolo/deflate64/tree/v2.0.0)  
-> ⚠️ every non-breaking changes will be merged in main until d64@2.0.0 will be ready.  
-> ⚠️ d64@2.0.0 will introduce some breaking changes, but deflate64@latest will be still available but not maintained.
+> ℹ️ README for branch v2.0.0
 ___
 
 ## Index of Contents
 
-- [Install globally Deflate64](#install-globally-deflate64)
-- [Usage of the cli Deflate64](#usage-of-the-cli-deflate64)
+- [Install globally Deflate64](#install-deflate64)
+- [Usage of the cli Deflate64](#usage)
   - [Commands for Deflate64 CLI](#commands-for-deflate64-cli)
     - [encode](#encode)
     - [decode](#decode)
@@ -31,9 +29,14 @@ ___
 
 ___
 
-### Install globally Deflate64
+### Install Deflate64
 
-Keep in mind that this is a CLI utility so install it globally for best usage.
+- #### Globally
+
+It is possible to install deflate64 globally in two ways.  
+First is using npm and the second is a containerized application.
+
+- #### NPM global installation
 
 ```shell
 npm install --global deflate64
@@ -41,7 +44,15 @@ npm install --global deflate64
 
 ___
 
-### Usage of the cli Deflate64
+- #### Docker 
+
+
+
+___
+
+Once installed it can be invoked using `deflate64` or `d64` followed by the command and the necessary flags.
+
+### Usage 
 
 ```bash
 deflate64 help # it shows the available commands and flags
