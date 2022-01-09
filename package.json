@@ -14,7 +14,7 @@
   ],
   "main": "./index.js",
   "bin": {
-    "d64" : "./executable.js",
+    "d64": "./executable.js",
     "deflate64": "./executable.js"
   },
   "scripts": {
@@ -22,7 +22,8 @@
     "eslint-fix": "npx eslint --fix . --ext .js",
     "assertions": "cd ./assertions/ && node ./assertions.js",
     "assertion0": "cd ./assertions/ && node ./assertions.js assertion0",
-    "assertion1": "cd ./assertions/ && node ./assertions.js assertion1"
+    "assertion1": "cd ./assertions/ && node ./assertions.js assertion1",
+    "assertionOnGoing": "cd ./assertions/ && node ./assertions.js assertionOnGoing"
   },
   "dependencies": {
     "boolean-jokes": "^1.3.4",

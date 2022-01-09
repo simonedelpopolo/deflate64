@@ -306,6 +306,25 @@ const Assertions = {
         console.log( 'returned response -> ', response1 )
         
     },
+    
+    // The on development try out assertion
+    assertionOnGoing : async () => {
+        const longString = 'I\'m actually working on a series of distributed microservice with nodejs. One of this microservice has a feature to compile a small PHP website, and it uses yaml file to make this happens.'
+
+        // At first, encodes the remote string
+        const encoded_longString = await d64( [
+            'encode',
+            '--string',
+            longString,
+            /* Let's silence the stdout */
+            '--quiet',
+            'true',
+            /* Let's request the stats */
+            '--ratio',
+            'true'
+        ] )
+        console.table( encoded_longString )
+    }
 }
 
 process.argv.splice( 0, 2 )
