@@ -1,2 +1,3 @@
 node_modules
-website
+website/public/js
+website/public/index.html
