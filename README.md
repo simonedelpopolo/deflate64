@@ -59,7 +59,7 @@ ___
 d64 imported as a module in your project? It got you covered. Let's see two simple examples to implement this use case.
 
 ```shell
-npm i deflate64@2.x.x-beta
+npm i deflate64
 ```
 
 `ESM encode->decode->replace->console.log`
