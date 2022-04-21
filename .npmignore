@@ -1,11 +1,10 @@
 .idea
-node_modules
 .git
 .github
-assertions
+tests
 .eslintignore
 .eslintrc.json
 .gitignore
 Dockerfile
 package-lock.json
-README.md
+.gitlab-ci.yml

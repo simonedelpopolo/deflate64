@@ -14,11 +14,11 @@ import {
  * The deflate64 entry point and default exported function.
  *
  * @public
- * @param {string[]} argv - Process.argv.splice( 0, 2 ) command line arguments splicing out from `process.argv` the paths for node and executable.js.
+ * @param {string[]} argv - Process.argv.splice( 0, 2 ) command line arguments splicing out from `process.argv` the paths for node and d64.js.
  * @returns {Promise | PromiseFulfilledResult<any> | PromiseRejectedResult<any>}
  */
 export default function deflate64( argv ){
-    
+
     return  entryPoint__( argv )
 }
 
@@ -26,11 +26,11 @@ export default function deflate64( argv ){
  * The d64 entry point and exported function.
  *
  * @public
- * @param {string[]} argv - Process.argv.splice( 0, 2 ) command line arguments splicing out from `process.argv` the paths for node and executable.js.
+ * @param {string[]} argv - Process.argv.splice( 0, 2 ) command line arguments splicing out from `process.argv` the paths for node and d64.js.
  * @returns {any|Promise | PromiseFulfilledResult<any> | PromiseRejectedResult<any>}
  */
 export function d64( argv ){
-    
+
     return  entryPoint__( argv )
 }
 

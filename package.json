@@ -1,49 +1,36 @@
 {
   "name": "deflate64",
   "description": "Command line utility to convert one file/string into compressed base64 encoding. the file/string can be decompressed and decoded to its original status.",
-  "version": "2.1.21",
+  "license": "Apache-2.0",
+  "version": "2.1.22",
   "type": "module",
+  "main": "./index.js",
+  "bin": {
+    "d64": "./d64.js",
+    "deflate64": "d64.js"
+  },
   "engines": {
-    "node": ">=v16.13.1 <17"
+    "node": "^17 || ^16 || ^14.15 || ^12.13"
   },
   "os": [
     "linux",
     "darwin",
     "!win32"
   ],
-  "main": "./index.js",
-  "bin": {
-    "d64": "./executable.js",
-    "deflate64": "./executable.js"
-  },
   "scripts": {
-    "eslint": "npx eslint . --ext .js",
-    "eslint-fix": "npx eslint --fix . --ext .js",
-    "assertions": "cd ./assertions/ && node ./assertions.js",
-    "assertion0": "cd ./assertions/ && node ./assertions.js assertion0",
-    "assertion1": "cd ./assertions/ && node ./assertions.js assertion1",
-    "assertionOnGoing": "cd ./assertions/ && node ./assertions.js assertionOnGoing"
-  },
-  "dependencies": {
-    "boolean-jokes": "latest",
-    "json-swiss-knife": "latest",
-    "oftypes": "latest"
+    "lint": "npx eslint . --ext .js",
+    "test": "npx 4t unit",
+    "coverage": "npx 4t --coverage unit"
   },
   "devDependencies": {
-    "eslint": "^8.6.0",
-    "eslint-plugin-jsdoc": "^37.5.2"
+    "eslint": "^8.13.0",
+    "eslint-plugin-jsdoc": "^39.2.7",
+    "trythistrythat": "^1.8.2"
   },
-  "publishConfig": {
-    "access": "public"
-  },
-  "homepage": "https://github.com/simonedelpopolo/deflate64#readme",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/simonedelpopolo/deflate64.git"
-  },
-  "bugs": {
-    "email": "simonedelpopolo@outlook.com",
-    "url": "https://github.com/simonedelpopolo/deflate64/issues"
+  "dependencies": {
+    "boolean-jokes": "^1.5.4",
+    "json-swiss-knife": "^1.6.13",
+    "oftypes": "^1.8.2"
   },
   "keywords": [
     "base64",
@@ -59,5 +46,13 @@
     "email": "simonedelpopolo@outlook.com",
     "url": "https://github.com/simonedelpopolo"
   },
-  "license": "Apache-2.0"
+  "homepage": "https://github.com/simonedelpopolo/deflate64#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/simonedelpopolo/deflate64.git"
+  },
+  "bugs": {
+    "email": "simonedelpopolo@outlook.com",
+    "url": "https://github.com/simonedelpopolo/deflate64/issues"
+  }
 }

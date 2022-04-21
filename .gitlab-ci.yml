@@ -1,0 +1,7 @@
+image: node:16.14.2
+
+npmjs publishing:
+  script:
+    - npm install
+    - npm test
+    - npm publish
