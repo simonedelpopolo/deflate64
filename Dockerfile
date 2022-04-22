@@ -1,7 +1,7 @@
-FROM node:16.14.0-bullseye-slim
+FROM node:16.14.2-alpine
 
 WORKDIR ~
 
-RUN npm i -g deflate64@2.1.21
+RUN npm i -g deflate64
 
 ENTRYPOINT ["/bin/bash"]
