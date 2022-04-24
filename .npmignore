@@ -5,6 +5,4 @@ tests
 .eslintignore
 .eslintrc.json
 .gitignore
-Dockerfile
 package-lock.json
-.gitlab-ci.yml

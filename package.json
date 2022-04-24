@@ -2,12 +2,12 @@
   "name": "deflate64",
   "description": "Command line utility to convert one file/string into compressed base64 encoding. the file/string can be decompressed and decoded to its original status.",
   "license": "Apache-2.0",
-  "version": "2.1.23",
+  "version": "3.0.0",
   "type": "module",
   "main": "./index.js",
   "bin": {
     "d64": "./d64.js",
-    "deflate64": "d64.js"
+    "deflate64": "./d64.js"
   },
   "engines": {
     "node": "^17 || ^16 || ^14.15 || ^12.13"
@@ -23,13 +23,15 @@
     "coverage": "npx 4t --coverage unit"
   },
   "devDependencies": {
-    "eslint": "^8.13.0",
-    "eslint-plugin-jsdoc": "^39.2.7",
+    "eslint": "^8.14.0",
+    "eslint-plugin-jsdoc": "^39.2.8",
     "trythistrythat": "^1.8.3"
   },
   "dependencies": {
-    "boolean-jokes": "^1.5.5",
-    "json-swiss-knife": "^1.6.14",
+    "@cli-blaze/activity": "^1.0.1",
+    "@cli-blaze/decors": "^1.0.1",
+    "@cli-blaze/error": "^1.0.1",
+    "@cli-blaze/input": "^1.0.1",
     "oftypes": "^1.8.2"
   },
   "keywords": [
