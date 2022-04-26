@@ -2,6 +2,7 @@
  * Deflate 64 option object.
  *
  * @typedef {Object} d64Options
+ * @property {boolean} [ejected=false] - d64 ejected from CLI
  * @property {string|null} [file] - path to filename
  * @property {string|boolean|null} [json] - will follow definition
  * @property {boolean} [no_compression=false] - if the output should be compressed
@@ -12,3 +13,5 @@
  * @property {string|undefined} [save=undefined] - path to filename to save encoded/decoded data
  * @property {string|null} string - to encode/decode at least this option is required.
  */
+
+export { default as d64 } from './lib/d64.js'

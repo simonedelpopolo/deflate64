@@ -6,3 +6,5 @@ tests
 .eslintrc.json
 .gitignore
 package-lock.json
+.nycrc
+coverage
