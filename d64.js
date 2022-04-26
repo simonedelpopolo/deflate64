@@ -11,28 +11,14 @@ process.title = 'd64'
 /**
  * Entry point to deflate64.
  */
-const d64 = await entry_point( process.argv, { d64: d64_process, executable:[ 'd64' ] } )
+const d64 = await entry_point(
+    process.argv,
+    {
+        d64: d64_process,
+        executable:[ 'd64' ]
+    }
+)
 
-switch ( Object.keys( d64[ 'command' ] )[ 0 ] ) {
+const command = Object.keys( d64[ 'command' ] )[ 0 ]
 
-    case 'decode':
-
-        await selection( 'decode', d64.flag )
-
-        break
-
-    case 'encode':
-
-        await selection( 'encode', d64.flag )
-
-        break
-
-    case 'help':
-
-        break
-
-    default:
-
-        break
-
-}
+await selection( command, d64.flag )

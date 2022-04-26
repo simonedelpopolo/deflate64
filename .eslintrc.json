@@ -9,7 +9,14 @@
     "es2022": true,
     "node": true
   },
+  "parser": "@babel/eslint-parser",
   "parserOptions": {
+    "babelOptions": {
+      "plugins": [
+        "@babel/plugin-syntax-import-assertions"
+      ]
+    },
+    "requireConfigFile": false,
     "ecmaVersion": "latest",
     "sourceType": "module",
     "ecmaFeatures": {
