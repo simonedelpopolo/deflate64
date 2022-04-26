@@ -1,8 +1,0 @@
-image: node:16.14.2
-
-npmjs publishing:
-  script:
-    - echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > .npmrc
-    - npm install
-    - npm test
-    - npm publish

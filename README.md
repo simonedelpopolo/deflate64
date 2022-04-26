@@ -3,6 +3,11 @@
 ###### Command line utility to convert one file/string into compressed base64 encoding. the file/string can be decompressed and decoded to its original status.
 ___
 
+> ⚠️ this version is no more maintained  
+> please consider to switch to [v.3.x.x](https://github.com/simonedelpopolo/deflate64/tree/v3.0.0) when ready!
+
+___
+
 ## Index of Contents
 
 - [Install d64](#install-d64)

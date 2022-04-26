@@ -7,4 +7,5 @@ tests
 .gitignore
 Dockerfile
 package-lock.json
-.gitlab-ci.yml
+.nycrc
+coverage
